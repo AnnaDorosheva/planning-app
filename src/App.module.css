@@ -1,0 +1,9 @@
+.nameApp {
+    color: var(--clr-white);
+    letter-spacing: 1.2rem;
+    font-weight: var(--fw-bold);
+    font-size: calc(var(--base-font) * 2.5);
+}
+.container {
+    margin-left: 40px;;
+}

@@ -1,0 +1,25 @@
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  color: var(--clr-gb-2);
+  width: 600px;
+  background-color: var(--clr-card-bg);
+  padding: 22px;
+  border-radius: 12px;
+  margin-top: 14px;
+}
+.filterContainer:hover,
+.filterContainer:focus {
+  box-shadow: var(--clr-box-shadow1);
+}
+.input {
+  font: inherit;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  border: 0.1rem solid var(--clr-gb-5);
+  border-radius: 12px;
+  color: var(--clr-gb-2);
+  padding: 8px;
+  margin-left: 12px;
+}

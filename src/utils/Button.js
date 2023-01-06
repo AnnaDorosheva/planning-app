@@ -1,29 +1,34 @@
-import React from 'react';
+import React from "react";
 import styled from "@emotion/styled";
 
-const ButtonStyle = styled.button` 
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 2px;
-background-color: #D7DEE0;
-width: 80px;
-height: 40px;
-border: 2px solid #66838C;
-border-radius: 8px;
-padding: 4px;
+const ButtonStyled = styled.button`
+  color: var(--clr-gb-2);
+  font: inherit;
+  font-size: var(--base-font);
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  background: transparent;
+  min-width: 20%;
+  height: 2.5rem;
+  border: 0.1rem solid var(--clr-gb-5);
+  border-radius: 12px;
+  padding: 4px;
 
-:hover, :focus {
-    background-color: #Afd4e0;
-    border: 2px solid #5e6364;
-    box-shadow: 0 10px 18px rgba(0,0,0,0.25), 0 6px 10px rgba(0,0,0,0.22);
-}
-`
+  :hover,
+  :focus {
+    background-color: var(--clr-gb-5);
+    box-shadow: var(--clr-box-shadow1);
+  }
+`;
 
 export const Button = ({ icon = null, type = "button", children, onClick }) => {
-return <ButtonStyle type={type} onClick={onClick}>
-    {icon}
-    {children}
-    </ButtonStyle>
+  return (
+    <ButtonStyled type={type} onClick={onClick}>
+      {icon}
+      {children}
+    </ButtonStyled>
+  );
 };
-
