@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   color: var(--clr-gb-2);
-  width: 600px;
+  width: 660px;
   background-color: var(--clr-card-bg);
   padding: 22px;
   border-radius: 12px;
 }
 .creatorContainer:hover, .creatorContainer:focus {
   box-shadow: var(--clr-box-shadow1);
+  transition: box-shadow 0.2s ease;
 }
 .addIcon {
   margin-right: 6px;
@@ -19,7 +20,7 @@
 }
 .textarea {
   font: inherit;
-  font-size: 16px;
+  font-size: var(--small-font);
   background-color: var(--clr-gb-3);
   outline: none;
   width: 250px;
@@ -28,11 +29,11 @@
   border-radius: 12px;
   color: var(--clr-gb-2);
   padding: 10px;
-  line-height: 1.6rem;
+  line-height: 20px;
   background:
     repeating-linear-gradient(to bottom,
       #999 0 1px,
-      transparent 1px 1.6rem)
+      transparent 1px 20px)
     0 18px / 100% content-box no-repeat;
   overflow: hidden;
 }

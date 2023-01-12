@@ -3,6 +3,9 @@
 :root {
   --ff-sans: "Josefin Sans", sans-serif;
   --base-font: 1.6rem;
+  --midium-font: 18px;
+  --small-font: 16px;
+  --xs-font: 12px;
   --fw-normal: 400;
   --fw-bold: 700;
   --img-bg: url("../src/images/bg-desktop-dark.jpg");

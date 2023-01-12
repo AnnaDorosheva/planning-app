@@ -1,3 +1,5 @@
+Приложение планировщик написано на React (https://github.com/facebook/create-react-app). В коде использованы hooks и class Component. Для хранения заметок на стороне клиента использован localStorage. В стилях использовалны css modules, react-icons и библиотека @emotion для написания стилизированых компонентов.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

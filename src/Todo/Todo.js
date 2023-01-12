@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
-import ModalWindow from "../Modalindow/ModalWindow"; 
-import { TodoContainer} from "./Todo.styled";
+import ModalWindow from "../Modalindow/ModalWindow";
+import { TodoContainer } from "./Todo.styled";
 import { Button } from "../utils/Button";
+import s from "./Todo.module.css";
 
 const Todo = (props) => {
-
   const [isDone, setIsDone] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
+
   const changeIsDone = () => {
     setIsDone(!isDone);
   };
 
-  const openModal = () => {
+  const openModal = (e) => {
     setIsOpenModal(!isOpenModal);
   };
 
@@ -24,23 +25,27 @@ const Todo = (props) => {
 
   return (
     <>
-      <TodoContainer onClick={openModal}>
-        <p>{props.item.id}</p>
-        <p>{props.item.todoHeader}</p>
-        <p>{props.item.todoText}</p>
+      <TodoContainer>
+        <p className={s.title} onClick={openModal}>{props.item.todoHeader}</p>
+        <p className={s.text} onClick={openModal}>{props.item.todoText}</p>
+
+        <input
+          className={s.checkbox}
+          type="checkbox"
+          name="isDone"
+          onChange={changeIsDone}
+          checked={isDone}
+        />
+        <Button onClick={props.delete} icon={<MdDeleteForever />}></Button>
       </TodoContainer>
-      <input
-        type="checkbox"
-        name="isDone"
-        onChange={changeIsDone}
-        checked={isDone}
-      />
-      <Button onClick={props.delete} icon={<MdDeleteForever/>}>
-         Delete
-      </Button>
       <>
         {isOpenModal && (
-          <ModalWindow closeModal={closeBlackdropModal} title={props.item.todoHeader} description={props.item.todoText} status={isDone} />
+          <ModalWindow
+            closeModal={closeBlackdropModal}
+            title={props.item.todoHeader}
+            description={props.item.todoText}
+            status={isDone}
+          />
         )}
       </>
     </>

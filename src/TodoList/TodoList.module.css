@@ -1,7 +1,20 @@
 .todoList {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 600px;
 }
 .todoListContainer {
-    /* width: 600px; */
+    
+}
+.heder {
+    display: flex;
+    justify-content: space-between;
+    font: inherit;
+    color: var(--clr-gb-3);
+    background: transparent;
+    height: 2.5rem;
+    border: 0.1rem solid var(--clr-gb-5);
+    border-radius: 12px;
+    padding: 6px 16px 6px 16px;
+    margin-top: 16px;
 }
