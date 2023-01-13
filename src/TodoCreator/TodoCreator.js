@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import s from "./TodoCreator.module.css";
-import { Button } from "../utils/Button";
+import { Button } from "../common/Button";
 import shortid from "shortid";
 import { MdOutlineAddCircle } from "react-icons/md";
 

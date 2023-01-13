@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdDisabledByDefault } from "react-icons/md";
-import { Button } from "../utils/Button";
+import { Button } from "../common/Button";
 
 import { Blackdrop, Window, Header, Description, Status } from "./ModalWindow.styled";
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import ModalWindow from "../Modalindow/ModalWindow";
 import { TodoContainer } from "./Todo.styled";
-import { Button } from "../utils/Button";
+import { Button } from "../common/Button";
 import s from "./Todo.module.css";
 
 const Todo = (props) => {
