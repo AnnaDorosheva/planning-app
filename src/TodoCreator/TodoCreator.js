@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import s from "./TodoCreator.module.css";
-import { Button } from "../common/Button";
+import { Button } from "../commons/Button";
 import shortid from "shortid";
 import { MdOutlineAddCircle } from "react-icons/md";
 
@@ -39,7 +39,7 @@ class TodoCreator extends Component {
               name="todoHeader"
               value={this.state.todoHeader}
               onChange={this.onChangeTodo}
-              className={s.input}
+              className={s.title}
               placeholder="Enter title..."
             />
           </label>

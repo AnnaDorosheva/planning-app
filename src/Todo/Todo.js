@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import ModalWindow from "../Modalindow/ModalWindow";
 import { TodoContainer } from "./Todo.styled";
-import { Button } from "../common/Button";
+import { Button } from "../commons/Button";
 import s from "./Todo.module.css";
 
 const Todo = (props) => {
@@ -25,7 +25,7 @@ const Todo = (props) => {
 
   return (
     <>
-      <TodoContainer>
+      <TodoContainer background={isDone}>
         <p className={s.title} onClick={openModal}>{props.item.todoHeader}</p>
         <p className={s.text} onClick={openModal}>{props.item.todoText}</p>
 

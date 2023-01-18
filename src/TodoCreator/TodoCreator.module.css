@@ -14,10 +14,6 @@
 .addIcon {
   margin-right: 6px;
 }
-.addButton {
-  margin-top: 60px;
-  background-color: red;
-}
 .textarea {
   font: inherit;
   font-size: var(--small-font);
@@ -37,7 +33,7 @@
     0 18px / 100% content-box no-repeat;
   overflow: hidden;
 }
-.input {
+.title {
   font: inherit;
   font-size: 16px;
   background: transparent;
@@ -54,5 +50,5 @@
 }
 .button {
   margin-top: 25px;
-  margin-left: 14px;
+  margin-left: auto;
 }

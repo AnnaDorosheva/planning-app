@@ -18,7 +18,7 @@ const TodoList = ({ itemsArr, filter, deleteItem }) => {
             <p>Description:</p>
             <p>Status:</p>
           </div>
-          <ul>
+          <ul className={s.list}>
             {itemsArr.length > 0 &&
               filteredTodos.map((item) => (
                 <li key={item.id}>
