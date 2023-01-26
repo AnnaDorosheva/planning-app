@@ -1,6 +1,7 @@
 Живая ссылка на проект: https://annadorosheva.github.io/planning-app/
 
-Приложение планировщик написано на React (https://github.com/facebook/create-react-app). В коде использованы hooks и class Component. Для хранения заметок на стороне клиента использован localStorage. В стилях использовалны css modules, react-icons и библиотека @emotion для написания стилизированых компонентов.
+Приложение планировщик написано на React (https://github.com/facebook/create-react-app). В коде использованы hooks и class Component. Для хранения заметок на стороне клиента использован localStorage. В стилях использовалны css modules, react-icons и библиотека @emotion для написания стилизированых компонентов. CreatePortal from react-dom использован дня модального окна.
+При клике на созданую заметку открывается модальное окно с заметкой и текст заметки можно отредактировать. Закрыть модальное окно можно при клике на кнопку Close, Escape или кликнув в поле вокруг заметки.
 
 # Getting Started with Create React App
 
