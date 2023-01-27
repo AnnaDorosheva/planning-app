@@ -18,10 +18,25 @@ export const Window = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
+  height: 40%;
 
-  padding: 8px;
+  font-size: var(--midium-font);
+  word-break: break-all;
+  color: var(--clr-gb-2);
   background-color: ${(props) =>
-    props.status ? "rgb(250, 234, 214)" : "pink"};
+    props.status ? "var(--clr-gb-4)" : "var(--clr-gb-4)"};
+  border: 0.1rem solid var(--clr-gb-5);
+  border-radius: 12px;
+  padding: 6px;
+  margin: 12px 0;
+
+  &:hover,
+  &:focus {
+    color: var(--clr-white);
+    background-color: var(--clr-gb-4);
+    box-shadow: var(--clr-box-shadow1);
+    transition: background-color 0.5s ease;
+  }
 `;
 
 export const Header = styled.h2`

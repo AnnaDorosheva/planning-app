@@ -1,4 +1,7 @@
-Живая ссылка на проект: https://annadorosheva.github.io/planning-app/
+Application Link / Живая ссылка на проект: https://annadorosheva.github.io/planning-app/
+
+The scheduler app is written in React (https://github.com/facebook/create-react-app). The code uses hooks and the Component class. LocalStorage is used to store notes on the client side. The styles use css modules, responsive icons, and the @emotion library to write styled components. CreatePortal from react-dom used a modal window day.
+When you click on the created note, a modal window with the note opens, and the note text can be edited. You can close the modal window by clicking on the Close button, Escape button or by clicking in the box around the note.
 
 Приложение планировщик написано на React (https://github.com/facebook/create-react-app). В коде использованы hooks и class Component. Для хранения заметок на стороне клиента использован localStorage. В стилях использовалны css modules, react-icons и библиотека @emotion для написания стилизированых компонентов. CreatePortal from react-dom использован дня модального окна.
 При клике на созданую заметку открывается модальное окно с заметкой и текст заметки можно отредактировать. Закрыть модальное окно можно при клике на кнопку Close, Escape или кликнув в поле вокруг заметки.

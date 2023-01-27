@@ -34,7 +34,7 @@ const App = () => {
     setItemsArr(newArr);
   };
 
-  const correctTextTodo = ( e, id) => {
+  const correctTextTodo = (e, id) => {
     const newArr = itemsArr.map((i) => {
       if (i.id === id) {
         return { ...i, todoText: e.target.value };

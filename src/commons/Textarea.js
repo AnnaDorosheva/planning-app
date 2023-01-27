@@ -6,7 +6,7 @@ const TextareaStyled = styled.textarea`
   background-color: var(--clr-gb-3);
   outline: none;
   width: 84%;
-  height: 50px;
+  height: 60%;
   border: 0.1rem solid var(--clr-gb-5);
   border-radius: 12px;
   color: var(--clr-gb-2);
