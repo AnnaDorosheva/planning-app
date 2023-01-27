@@ -2,7 +2,7 @@ import React from "react";
 import s from "./TodoList.module.css";
 import Todo from "../Todo/Todo";
 
-const TodoList = ({ itemsArr, filter, deleteItem }) => {
+const TodoList = ({ itemsArr, filter, deleteItem, changeIsDone }) => {
   const normalaizedFilter = filter.toLowerCase();
 
   const filteredTodos = itemsArr.filter((item) =>
@@ -22,7 +22,7 @@ const TodoList = ({ itemsArr, filter, deleteItem }) => {
             {itemsArr.length > 0 &&
               filteredTodos.map((item) => (
                 <li key={item.id}>
-                  <Todo item={item} delete={() => deleteItem(item.id)} />
+                  <Todo item={item} delete={() => deleteItem(item.id)} changeIsDone={() => changeIsDone(item.id)}/>
                 </li>
               ))}
           </ul>

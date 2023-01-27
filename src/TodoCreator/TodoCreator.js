@@ -8,6 +8,7 @@ class TodoCreator extends Component {
   state = {
     todoHeader: "",
     todoText: "",
+    isDone: false
   };
 
   handleSubmitTodo = (e) => {
@@ -25,6 +26,7 @@ class TodoCreator extends Component {
     this.setState({
       todoHeader: "",
       todoText: "",
+      isDone: false
     });
   };
 

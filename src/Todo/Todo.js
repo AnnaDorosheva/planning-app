@@ -6,12 +6,8 @@ import { Button } from "../commons/Button";
 import s from "./Todo.module.css";
 
 const Todo = (props) => {
-  const [isDone, setIsDone] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const changeIsDone = () => {
-    setIsDone(!isDone);
-  };
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const toggleOpenModal = (e) => {
     setIsOpenModal(!isOpenModal);
@@ -37,7 +33,7 @@ const Todo = (props) => {
 
   return (
     <>
-      <TodoContainer background={isDone}>
+      <TodoContainer background={props.item.isDone}>
         <p className={s.title} onClick={toggleOpenModal}>{props.item.todoHeader}</p>
         <p className={s.text} onClick={toggleOpenModal}>{props.item.todoText}</p>
 
@@ -45,8 +41,8 @@ const Todo = (props) => {
           className={s.checkbox}
           type="checkbox"
           name="isDone"
-          onChange={changeIsDone}
-          checked={isDone}
+          onChange={props.changeIsDone}
+          checked={props.item.isDone}
         />
         <Button onClick={props.delete} icon={<MdDeleteForever />}></Button>
       </TodoContainer>
@@ -56,7 +52,7 @@ const Todo = (props) => {
             closeModal={closeBlackdropModal}
             title={props.item.todoHeader}
             description={props.item.todoText}
-            status={isDone}
+            status={props.item.isDone}
           />
         )}
       </>

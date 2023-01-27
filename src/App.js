@@ -23,6 +23,17 @@ const App = () => {
     setItemsArr(newArr);
   };
 
+  const changeIsDone = (id) => {
+    const newArr = itemsArr.map((i) => {
+      if (i.id === id) {
+        return { ...i, isDone: !i.isDone };
+      }
+      return i;
+    });
+
+    setItemsArr(newArr);
+  };
+
   const handleFilter = (e) => {
     setFilter(e.currentTarget.value);
   };
@@ -32,7 +43,12 @@ const App = () => {
       <h1 className={s.nameApp}>Create TODO</h1>
       <TodoCreator pushItem={addItem} />
       <TodoFilter onFilter={handleFilter} filter={filter} />
-      <TodoList itemsArr={itemsArr} filter={filter} deleteItem={deleteItem} />
+      <TodoList
+        itemsArr={itemsArr}
+        filter={filter}
+        deleteItem={deleteItem}
+        changeIsDone={changeIsDone}
+      />
     </div>
   );
 };
