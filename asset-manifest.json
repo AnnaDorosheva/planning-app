@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/planning-app/static/css/main.e6be3a6b.css",
-    "main.js": "/planning-app/static/js/main.c345ad5f.js",
+    "main.css": "/planning-app/static/css/main.da62ab04.css",
+    "main.js": "/planning-app/static/js/main.ca12e6c9.js",
     "static/js/787.a5a00b74.chunk.js": "/planning-app/static/js/787.a5a00b74.chunk.js",
     "static/media/bg-desktop-dark.jpg": "/planning-app/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
     "index.html": "/planning-app/index.html",
-    "main.e6be3a6b.css.map": "/planning-app/static/css/main.e6be3a6b.css.map",
-    "main.c345ad5f.js.map": "/planning-app/static/js/main.c345ad5f.js.map",
+    "main.da62ab04.css.map": "/planning-app/static/css/main.da62ab04.css.map",
+    "main.ca12e6c9.js.map": "/planning-app/static/js/main.ca12e6c9.js.map",
     "787.a5a00b74.chunk.js.map": "/planning-app/static/js/787.a5a00b74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6be3a6b.css",
-    "static/js/main.c345ad5f.js"
+    "static/css/main.da62ab04.css",
+    "static/js/main.ca12e6c9.js"
   ]
 }
