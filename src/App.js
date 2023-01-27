@@ -34,6 +34,16 @@ const App = () => {
     setItemsArr(newArr);
   };
 
+  const correctTextTodo = ( e, id) => {
+    const newArr = itemsArr.map((i) => {
+      if (i.id === id) {
+        return { ...i, todoText: e.target.value };
+      }
+      return i;
+    });
+    setItemsArr(newArr);
+  };
+
   const handleFilter = (e) => {
     setFilter(e.currentTarget.value);
   };
@@ -48,6 +58,7 @@ const App = () => {
         filter={filter}
         deleteItem={deleteItem}
         changeIsDone={changeIsDone}
+        correctTextTodo={correctTextTodo}
       />
     </div>
   );

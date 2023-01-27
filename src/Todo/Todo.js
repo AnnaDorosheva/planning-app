@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import ModalWindow from "../Modalindow/ModalWindow";
 import { TodoContainer } from "./Todo.styled";
@@ -6,7 +6,6 @@ import { Button } from "../commons/Button";
 import s from "./Todo.module.css";
 
 const Todo = (props) => {
-
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const toggleOpenModal = (e) => {
@@ -18,24 +17,28 @@ const Todo = (props) => {
       toggleOpenModal();
     }
   };
-  
-  const closeWindow = ( e ) => {
-    if(e.code === "Escape") {
+
+  const closeWindow = (e) => {
+    if (e.code === "Escape") {
       setIsOpenModal(false);
     }
-  }
+  };
   useEffect(() => {
-    window.addEventListener("keydown", closeWindow)
+    window.addEventListener("keydown", closeWindow);
     return () => {
-      window.removeEventListener("keydown", closeWindow)
+      window.removeEventListener("keydown", closeWindow);
     };
   }, [isOpenModal]);
 
   return (
     <>
       <TodoContainer background={props.item.isDone}>
-        <p className={s.title} onClick={toggleOpenModal}>{props.item.todoHeader}</p>
-        <p className={s.text} onClick={toggleOpenModal}>{props.item.todoText}</p>
+        <p className={s.title} onClick={toggleOpenModal}>
+          {props.item.todoHeader}
+        </p>
+        <p className={s.text} onClick={toggleOpenModal}>
+          {props.item.todoText}
+        </p>
 
         <input
           className={s.checkbox}
@@ -50,9 +53,11 @@ const Todo = (props) => {
         {isOpenModal && (
           <ModalWindow
             closeModal={closeBlackdropModal}
+            id={props.item.id}
             title={props.item.todoHeader}
             description={props.item.todoText}
             status={props.item.isDone}
+            correctTextTodo={props.correctTextTodo}
           />
         )}
       </>

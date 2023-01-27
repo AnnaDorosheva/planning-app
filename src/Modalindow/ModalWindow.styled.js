@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Blackdrop = styled.div`
-position: fixed;
+  position: fixed;
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -13,15 +13,15 @@ position: fixed;
 `;
 
 export const Window = styled.div`
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-  /* justify-content: center;
-  align-items: center;  */
-  padding: 8px;
-  background-color: ${props => props.status ? "rgb(250, 234, 214)" : "pink"};
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
 
+  padding: 8px;
+  background-color: ${(props) =>
+    props.status ? "rgb(250, 234, 214)" : "pink"};
 `;
 
 export const Header = styled.h2`
@@ -30,9 +30,6 @@ export const Header = styled.h2`
   color: gray;
 `;
 
-export const Description = styled.p`
-font-size: 18px;
-`
-export const Status = styled.p` 
-font-weight: 500;
-`
+export const Status = styled.p`
+  font-weight: 500;
+`;

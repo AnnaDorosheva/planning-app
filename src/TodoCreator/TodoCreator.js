@@ -3,6 +3,7 @@ import s from "./TodoCreator.module.css";
 import { Button } from "../commons/Button";
 import shortid from "shortid";
 import { MdOutlineAddCircle } from "react-icons/md";
+import { Textarea } from "../commons/Textarea";
 
 class TodoCreator extends Component {
   state = {
@@ -47,12 +48,11 @@ class TodoCreator extends Component {
           </label>
           <label>
             Description:
-            <textarea
+            <Textarea
               type="text"
               name="todoText"
               value={this.state.todoText}
               onChange={this.onChangeTodo}
-              className={s.textarea}
               placeholder="Enter text..."
             />
           </label>
