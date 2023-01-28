@@ -22,7 +22,7 @@ export const Window = styled.div`
 
   font-size: var(--midium-font);
   word-break: break-all;
-  color: var(--clr-gb-2);
+  color: var(--clr-white);
   background-color: ${(props) =>
     props.status ? "var(--clr-gb-4)" : "var(--clr-gb-4)"};
   border: 0.1rem solid var(--clr-gb-5);

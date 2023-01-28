@@ -39,14 +39,16 @@ const Todo = (props) => {
         <p className={s.text} onClick={toggleOpenModal}>
           {props.item.todoText}
         </p>
-
-        <input
+<div className={s.checkboxContainer}>
+<input
           className={s.checkbox}
           type="checkbox"
           name="isDone"
           onChange={props.changeIsDone}
           checked={props.item.isDone}
         />
+        <span className={s.checkboxIcon}></span>
+</div>
         <Button onClick={props.delete} icon={<MdDeleteForever />}></Button>
       </TodoContainer>
       <>
