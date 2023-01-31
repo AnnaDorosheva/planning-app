@@ -9,13 +9,21 @@ class TodoCreator extends Component {
   state = {
     todoHeader: "",
     todoText: "",
-    isDone: false
+    isDone: false,
+    order: 1
   };
 
   handleSubmitTodo = (e) => {
     e.preventDefault();
     const id = shortid.generate();
-    this.props.pushItem({ id, ...this.state });
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        order: prevState.order + 1
+      }
+    })
+    this.props.pushItem({...this.state, id });
+    console.log(this.state);
     this.reset();
   };
 

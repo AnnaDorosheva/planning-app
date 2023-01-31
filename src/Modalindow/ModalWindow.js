@@ -15,13 +15,15 @@ const ModalWindow = (props) => {
 
   return createPortal(
     <Blackdrop onClick={props.closeModal}>
-      <Window status={props.status}>
-        <Header>{props.title}</Header>
+      <Window>
+        <Header>{props.title}:</Header>
         <Textarea value={props.description} onChange={(e, id) => props.correctTextTodo(e, props.id)}/>
-        <Status>status: {props.status ? "done" : "nor ready"}</Status>
+        <div style={{display: "flex", width: "84%", justifyContent: "space-between", margin: "8px"}}>
+        <Status status={props.status}>Status: {props.status ? "Done" : "Not ready"}</Status>
         <Button onClick={props.closeModal} icon={<MdDisabledByDefault />}>
           Close
         </Button>
+        </div>
       </Window>
     </Blackdrop>, modalRoot
   );

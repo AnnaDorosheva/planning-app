@@ -7,12 +7,15 @@ export const TodoContainer = styled.div`
   font-size: var(--small-font);
   word-break: break-all;
   color: var(--clr-gb-2);
-  background-color: ${({background}) => background ? "var(--clr-gb-6)": "var(--clr-card-bg)"};
+  background-color: ${({ background }) =>
+    background ? "var(--clr-gb-6)" : "var(--clr-card-bg)"};
   border: 0.1rem solid var(--clr-gb-5);
   border-radius: 12px;
   padding: 6px;
-  margin: 12px 0 ;
-  
+  margin: 12px;
+  cursor: grab;
+  width: 400px;
+  min-height: 100px;
 
   &:hover,
   &:focus {

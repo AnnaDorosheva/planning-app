@@ -32,7 +32,7 @@ const Todo = (props) => {
 
   return (
     <>
-      <TodoContainer background={props.item.isDone}>
+      <TodoContainer background={props.item.isDone} draggable={true}>
         <p className={s.title} onClick={toggleOpenModal}>
           {props.item.todoHeader}
         </p>

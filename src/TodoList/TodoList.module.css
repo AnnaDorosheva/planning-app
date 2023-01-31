@@ -1,14 +1,13 @@
 .todoList {
     display: flex;
-    flex-direction: column;
-    width: 600px;
 }
 .todoListContainer {
-    
+ 
 }
 .heder {
     display: flex;
     justify-content: space-between;
+    max-width: 400px;
     font: inherit;
     color: var(--clr-gb-3);
     background: transparent;
@@ -17,7 +16,12 @@
     border-radius: 12px;
     padding: 6px 16px 6px 16px;
     margin-top: 16px;
+    margin: auto;
 }
 .list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     list-style: none;
 }

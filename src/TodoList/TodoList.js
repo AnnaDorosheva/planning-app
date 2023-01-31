@@ -12,12 +12,12 @@ const TodoList = ({ itemsArr, filter, deleteItem, changeIsDone, correctTextTodo 
   return (
     <div>
       <section className={s.todoListContainer}>
-        <div className={s.todoList}>
-          <div className={s.heder}>
+      <div className={s.heder}>
             <p>Title:</p>
             <p>Description:</p>
             <p>Status:</p>
           </div>
+        <div className={s.todoList}>
           <ul className={s.list}>
             {itemsArr.length > 0 &&
               filteredTodos.map((item) => (
