@@ -74,7 +74,7 @@ const App = () => {
 
   return (
     <div className={s.container}>
-      <h1 className={s.nameApp}>Create TODO</h1>
+      <h1 className={s.nameApp}>Create TASKS</h1>
       <TodoCreator pushItem={addItem} />
       <TodoFilter onFilter={handleFilter} filter={filter} />
       <TodoList

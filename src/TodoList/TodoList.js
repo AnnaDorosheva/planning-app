@@ -13,11 +13,11 @@ const TodoList = ({
   const normalaizedFilter = filter.toLowerCase();
 
   const filteredTodos = itemsArr.filter((item) =>
-    item.todoText.toLowerCase().includes(normalaizedFilter)
+    item.todoText.toLowerCase().includes(normalaizedFilter) || item.todoHeader.toLowerCase().includes(normalaizedFilter)
   );
 
   // DRAG & DROP logic:
-  
+
   const sortCards = (a, b) => {
     if (a.order > b.order) {
       return 1;

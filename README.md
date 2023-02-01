@@ -1,10 +1,20 @@
 Application Link / Живая ссылка на проект: https://annadorosheva.github.io/planning-app/
 
-The scheduler app is written in React (https://github.com/facebook/create-react-app). The code uses hooks and the Component class. LocalStorage is used to store notes on the client side. The styles use css modules, responsive icons, and the @emotion library to write styled components. CreatePortal from react-dom used a modal window day.
-When you click on the created note, a modal window with the note opens, and the note text can be edited. You can close the modal window by clicking on the Close button, Escape button or by clicking in the box around the note.
+Tasks creator.
+This app is written in React (https://github.com/facebook/create-react-app). The code uses hooks and the Component class. LocalStorage is used to store notes on the client side. The styles use css modules, responsive icons, and the @emotion library to write styled components. CreatePortal from react-dom used for a modal window.
+The drag&drop logic is also used for dragging and dropping notes.
+In a special window, you can create a note, it will be added to the field for all notes. Notes can be filtered by a given word or part of a word in a special filter field.
+When you click on the created note, a modal window with the note opens and the text can be edited. You can close the modal window by clicking on the Close button, Escape button or by clicking in the box around the note.
+Notes can be swapped by dragging the mouse, you can mark completed by clicking on the existing icon in the note, after which the background color of the completed note will change.
+You can delete a note by clicking on the "delete" button in the note.
+To delete all created notes, you need to click on the "delete all" button under the notes.
 
-Приложение планировщик написано на React (https://github.com/facebook/create-react-app). В коде использованы hooks и class Component. Для хранения заметок на стороне клиента использован localStorage. В стилях использовалны css modules, react-icons и библиотека @emotion для написания стилизированых компонентов. CreatePortal from react-dom использован дня модального окна.
-При клике на созданую заметку открывается модальное окно с заметкой и текст заметки можно отредактировать. Закрыть модальное окно можно при клике на кнопку Close, Escape или кликнув в поле вокруг заметки.
+Приложение планировщик написано на React (https://github.com/facebook/create-react-app). В коде использованы hooks и class Component. Для хранения заметок на стороне клиента использован localStorage. В стилях использовалны css modules, react-icons и библиотека @emotion для написания стилизированых компонентов. CreatePortal from react-dom использован дня модального окна. Так-же использована логика drag&drop для перетаскивания заметок.
+В специальном окне можно создать заметку, она добавится в поле для всех заметок. Заметки можно фильтровать по заданному слову или части слова в специальном поле фильтра.
+При клике на созданую заметку открывается модальное окно с заметкой и текст можно отредактировать. Закрыть модальное окно можно при клике на кнопку Close, Escape или кликнув в поле вокруг заметки.
+Заметки можно менять местами перетаскивая мышью, можно отмечать выполненные кликнув на сществующий значок в заметке, после чего изменится цвет фона выполненной заметки.
+Удалить заметку можно кликнув по кнопке "удалить" в заметке.
+Что бы удалить все созданные заметки, нужно кликнуть на кнопку "удалить все" под заметками.
 
 # Getting Started with Create React App
 
