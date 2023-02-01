@@ -32,23 +32,25 @@ const Todo = (props) => {
 
   return (
     <>
-      <TodoContainer background={props.item.isDone} draggable={true}>
+      <TodoContainer
+        background={props.item.isDone}
+      >
         <p className={s.title} onClick={toggleOpenModal}>
           {props.item.todoHeader}
         </p>
         <p className={s.text} onClick={toggleOpenModal}>
           {props.item.todoText}
         </p>
-<div className={s.checkboxContainer}>
-<input
-          className={s.checkbox}
-          type="checkbox"
-          name="isDone"
-          onChange={props.changeIsDone}
-          checked={props.item.isDone}
-        />
-        <span className={s.checkboxIcon}></span>
-</div>
+        <div className={s.checkboxContainer}>
+          <input
+            className={s.checkbox}
+            type="checkbox"
+            name="isDone"
+            onChange={props.changeIsDone}
+            checked={props.item.isDone}
+          />
+          <span className={s.checkboxIcon}></span>
+        </div>
         <Button onClick={props.delete} icon={<MdDeleteForever />}></Button>
       </TodoContainer>
       <>

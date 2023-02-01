@@ -14,7 +14,7 @@ export const TodoContainer = styled.div`
   padding: 6px;
   margin: 12px;
   cursor: grab;
-  width: 400px;
+  width: 440px;
   min-height: 100px;
 
   &:hover,

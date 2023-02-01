@@ -6,7 +6,7 @@ export const Blackdrop = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(89, 85, 85, 0.5);
+  background-color: rgba(89, 85, 85, 0.7);
 `;
 
 export const Window = styled.div`
@@ -22,7 +22,7 @@ export const Window = styled.div`
   font-size: var(--midium-font);
   word-break: break-all;
   color: var(--clr-gb-2);
-  background-color: var(--clr-gb-7);
+  background-color: var(--clr-gb-8);
   border: 0.1rem solid rgba(0, 0, 0, .2);
   border-radius: 12px;
   padding: 10px;
@@ -31,7 +31,7 @@ export const Window = styled.div`
   &:hover,
   &:focus {
     color: var(--clr-white);
-    background-color: var(--clr-gb-6);
+    background-color: var(--clr-gb-7);
     box-shadow: var(--clr-box-shadow1);
     transition: background-color 0.5s ease;
   }
@@ -43,7 +43,7 @@ text-align: center;
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--clr-gb-2);
   text-shadow: 5px 5px 5px #000000;
   padding: 10px 10px 6px 10px;
 `;
@@ -52,4 +52,5 @@ export const Status = styled.p`
   font-weight: 500;
   padding: 6px;
   color: ${(props) => props.status ? "var(--clr-green)" : "var(--clr-pink)"};
+  text-shadow: 5px 5px 5px #000000;
 `;

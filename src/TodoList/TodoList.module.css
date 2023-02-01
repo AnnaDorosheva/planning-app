@@ -2,7 +2,7 @@
     display: flex;
 }
 .todoListContainer {
- 
+    margin-top: 20px;
 }
 .heder {
     display: flex;

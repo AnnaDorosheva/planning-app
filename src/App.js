@@ -9,6 +9,7 @@ const App = () => {
     JSON.parse(localStorage.getItem("items")) || []
   );
   const [filter, setFilter] = useState("");
+  const [currentCard, setCurrentCard] =useState(null);
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(itemsArr));
@@ -48,6 +49,18 @@ const App = () => {
     setFilter(e.currentTarget.value);
   };
 
+  const chengeItemsArrOrders = (arr, card) => {
+setItemsArr(itemsArr.map(item => {
+  if(item.id === card.id) {
+    return {...item, order: currentCard.order}
+  }
+  if(item.id === currentCard.id) {
+    return {...item, order: card.order}
+  }
+  return item;
+}))
+  };
+
   return (
     <div className={s.container}>
       <h1 className={s.nameApp}>Create TODO</h1>
@@ -59,6 +72,8 @@ const App = () => {
         deleteItem={deleteItem}
         changeIsDone={changeIsDone}
         correctTextTodo={correctTextTodo}
+        setCurrentCard={setCurrentCard}
+        chengeItemsArrOrders={chengeItemsArrOrders}
       />
     </div>
   );

@@ -1,8 +1,10 @@
 .title {
     display: flex;
+    justify-content: center;
     width: 28%;
     padding: 6px;
     margin-right: 6px;
+    margin: auto;
 }
 .text {
     width: 60%;
