@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import s from "./TodoList.module.css";
 import Todo from "../Todo/Todo";
 
@@ -11,14 +10,14 @@ const TodoList = ({
   setCurrentCard,
   chengeItemsArrOrders,
 }) => {
-  // const [currentCard, setCurrentCard] =useState(null);
   const normalaizedFilter = filter.toLowerCase();
 
   const filteredTodos = itemsArr.filter((item) =>
     item.todoText.toLowerCase().includes(normalaizedFilter)
   );
 
-  // DRAG & DROP logic
+  // DRAG & DROP logic:
+  
   const sortCards = (a, b) => {
     if (a.order > b.order) {
       return 1;
@@ -30,17 +29,13 @@ const TodoList = ({
   const dragStartHeanler = (e, card) => {
     setCurrentCard(card);
   };
-  const dragEndHeanler = (e) => {
-    // e.target.style.background = "var(--clr-gb-6)";
-  };
+  const dragEndHeanler = (e) => {};
   const dragOverHeanler = (e) => {
     e.preventDefault();
-    // e.target.style.background = "var(--clr-gb-3)";
   };
   const dragHeanler = (e, card) => {
     e.preventDefault();
     chengeItemsArrOrders(itemsArr, card);
-    // e.target.style.background = "var(--clr-gb-5)";
   };
 
   return (

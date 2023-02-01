@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import s from "./App.module.css";
+import { MdDeleteForever } from "react-icons/md";
 import TodoList from "./TodoList/TodoList";
 import TodoCreator from "./TodoCreator/TodoCreator";
 import TodoFilter from "./TodoFilter/TodoFilter";
+import { Button } from "./commons/Button";
 
 const App = () => {
   const [itemsArr, setItemsArr] = useState(
     JSON.parse(localStorage.getItem("items")) || []
   );
   const [filter, setFilter] = useState("");
-  const [currentCard, setCurrentCard] =useState(null);
+  const [currentCard, setCurrentCard] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(itemsArr));
@@ -49,16 +51,25 @@ const App = () => {
     setFilter(e.currentTarget.value);
   };
 
+  // Drag & drop change order cards:
   const chengeItemsArrOrders = (arr, card) => {
-setItemsArr(itemsArr.map(item => {
-  if(item.id === card.id) {
-    return {...item, order: currentCard.order}
-  }
-  if(item.id === currentCard.id) {
-    return {...item, order: card.order}
-  }
-  return item;
-}))
+    setItemsArr(
+      itemsArr.map((item) => {
+        if (item.id === card.id) {
+          return { ...item, order: currentCard.order };
+        }
+        if (item.id === currentCard.id) {
+          return { ...item, order: card.order };
+        }
+        return item;
+      })
+    );
+  };
+
+  // DELETE all items:
+
+  const onDeleteAllItems = () => {
+    setItemsArr([]);
   };
 
   return (
@@ -75,6 +86,14 @@ setItemsArr(itemsArr.map(item => {
         setCurrentCard={setCurrentCard}
         chengeItemsArrOrders={chengeItemsArrOrders}
       />
+      <div className={s.button}>
+        <Button
+          icon={<MdDeleteForever className={s.deletIcon} />}
+          onClick={onDeleteAllItems}
+        >
+          Delete all
+        </Button>
+      </div>
     </div>
   );
 };
