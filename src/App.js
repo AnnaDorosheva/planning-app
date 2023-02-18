@@ -5,6 +5,7 @@ import TodoList from "./TodoList/TodoList";
 import TodoCreator from "./TodoCreator/TodoCreator";
 import TodoFilter from "./TodoFilter/TodoFilter";
 import { Button } from "./commons/Button";
+import Instruction from "./Instruction/Instruction";
 
 const App = () => {
   const [itemsArr, setItemsArr] = useState(
@@ -12,6 +13,7 @@ const App = () => {
   );
   const [filter, setFilter] = useState("");
   const [currentCard, setCurrentCard] = useState(null);
+  const [instruction, setCloseInstruction] = useState(true)
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(itemsArr));
@@ -72,11 +74,18 @@ const App = () => {
     setItemsArr([]);
   };
 
+  // Close Instruction
+
+  const closeInstruction = () => {
+    setCloseInstruction(false)
+  };
+
   return (
     <div className={s.container}>
       <h1 className={s.nameApp}>Create TASKS</h1>
       <TodoCreator pushItem={addItem} />
       <TodoFilter onFilter={handleFilter} filter={filter} />
+     { instruction && <Instruction onClose={closeInstruction}/>}
       <TodoList
         itemsArr={itemsArr}
         filter={filter}

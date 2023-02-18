@@ -1,0 +1,18 @@
+.container {
+    position: absolute;
+    font-size: var(--midium-font);
+    color: var(--clr-gb-2);
+    right: 6%;
+    top: 40px;
+    width: 30%;
+
+}
+.header {
+    text-align: center;
+    padding-bottom: 6px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+}

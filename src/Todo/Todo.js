@@ -31,13 +31,14 @@ const Todo = (props) => {
   }, [isOpenModal]);
 
   return (
-    <>
+    <div className={s.container}>
       <TodoContainer
         background={props.item.isDone}
       >
         <p className={s.title} onClick={toggleOpenModal}>
           {props.item.todoHeader}
         </p>
+        <div className={s.todo}>
         <p className={s.text} onClick={toggleOpenModal}>
           {props.item.todoText}
         </p>
@@ -52,6 +53,7 @@ const Todo = (props) => {
           <span className={s.checkboxIcon}></span>
         </div>
         <Button onClick={props.delete} icon={<MdDeleteForever />}></Button>
+        </div>
       </TodoContainer>
       <>
         {isOpenModal && (
@@ -65,7 +67,7 @@ const Todo = (props) => {
           />
         )}
       </>
-    </>
+    </div>
   );
 };
 

@@ -1,9 +1,6 @@
 import styled from "@emotion/styled";
 
 export const TodoContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: var(--small-font);
   word-break: break-all;
   color: var(--clr-gb-2);

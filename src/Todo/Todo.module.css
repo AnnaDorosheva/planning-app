@@ -1,12 +1,19 @@
 .title {
-    width: 28%;
+    font-size: var(--midium-font);
+    font-weight: var(--fw-bold);
+    text-align: center;
     padding: 6px;
     margin-right: 6px;
     margin: auto;
 }
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .text {
-    width: 60%;
-    padding: 6px;
+    width: 80%;
+    padding: 8px;
 }
 .checkbox {
     transform: scale(1.8);
@@ -23,6 +30,11 @@
     position: relative;
     margin-right: 8px;
     margin-left: 8px;
+}
+.checkboxContainer:hover {
+    background-color: var(--clr-gb-5);
+    box-shadow: var(--clr-box-shadow1);
+    transition: background-color 0.5s ease;
 }
 .checkbox:checked + .checkboxIcon {
     background: url(../images/check2.png), linear-gradient(45deg, var(--clr-green), var(--clr-pink));
